@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analysis Dashboard</title>
+
+    <!-- Link to Bootstrap for modern styling -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    </head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">Analysis Dashboard</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="/correlation">Correlation Analysis</a>
+                <a class="nav-link" href="/capacity">Capacity Analysis</a>
+
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<!-- Introduction -->
+<div class="container mt-4">
+    <h2>Welcome to the Analysis Dashboard</h2>
+    <p>This dashboard provides various analyses on the Velib station data.</p>
+</div>
+
+<!-- Analysis Controls -->
+<div class="container mt-4">
+    <h4>Analysis Controls</h4>
+    
+<form method="post" action="/capacity">
+    <label for="order_by">Order By:</label>
+    <select name="order_by" id="order_by">
+        <option value="ASC">Ascending</option>
+        <option value="DESC">Descending</option>
+    </select>
+
+    <label for="filter_by">Filter By:</label>
+    <input type="text" name="filter_by" id="filter_by" placeholder="Enter filter value">
+
+    <button class="btn btn-primary" type="submit">Submit / Reset Filter</button>
+</form>
+</div>
+
+<!-- Plot container -->
+<div class="container mt-4">
+    {{ plot|safe }}
+</div>
+
+<!-- Bootstrap JS and dependencies -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</body>
+</html>
