@@ -33,10 +33,9 @@
     <p>This dashboard provides various analyses on the Velib station data.</p>
 </div>
 
-<!-- Analysis Controls -->
+{% if 'capacity' in request.path %}
 <div class="container mt-4">
     <h4>Analysis Controls</h4>
-    
 <form method="post" action="/capacity">
     <label for="order_by">Order By:</label>
     <select name="order_by" id="order_by">
@@ -50,7 +49,7 @@
     <button class="btn btn-primary" type="submit">Submit / Reset Filter</button>
 </form>
 </div>
-
+{% endif %}
 <!-- Plot container -->
 <div class="container mt-4">
     {{ plot|safe }}
