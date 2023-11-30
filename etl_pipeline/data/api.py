@@ -1,4 +1,3 @@
-# data/api.py
 import requests
 
 def get_api_data(api_url):

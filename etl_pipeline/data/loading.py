@@ -1,11 +1,9 @@
-# data/loading.py
 from sqlalchemy import create_engine
 from database.models import station_table
 from database.connection import connection
 
 
 def load_into_database(df):
-    # Insert data into Station table
     station_data = df[[
         'stationcode',  'capacity', 'numdocksavailable',
         'numbikesavailable', 'mechanical', 'ebike','is_installed', 'is_renting', 'is_returning','nom_arrondissement_communes'

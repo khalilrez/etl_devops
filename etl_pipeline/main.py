@@ -1,4 +1,3 @@
-# main.py
 from data.api import get_api_data
 from data.transformations import get_transformed_data
 from data.loading import load_into_database

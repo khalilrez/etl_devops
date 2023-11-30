@@ -1,4 +1,3 @@
-# database/models.py
 from sqlalchemy import Column, Integer, String, Boolean,Table
 from database.connection import metadata
 

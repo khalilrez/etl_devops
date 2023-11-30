@@ -11,12 +11,9 @@ def index():
 
 @app.route('/correlation')
 def correlation():
-    # Load the data from MySQL database
     query = 'SELECT * FROM Station'
     df = pd.read_sql(query, engine)
-    # Extract numerical columns
     numerical_columns = ['capacity', 'numdocksavailable', 'numbikesavailable', 'mechanical', 'ebike']
-    # Calculate correlation matrix
     correlation_matrix = df[numerical_columns].corr()
     fig = px.imshow(correlation_matrix)
     return render_template('plot.html', plot=fig.to_html())
@@ -39,7 +36,6 @@ def capacity():
             query += f'ORDER BY total_capacity {order_by}'
         df_sorted = pd.read_sql(query, engine)
     else:
-        # Load the data from MySQL database
         query = 'SELECT nom_arrondissement_communes, SUM(capacity) AS total_capacity FROM Station GROUP BY nom_arrondissement_communes '
         df_sorted = pd.read_sql(query, engine)
 

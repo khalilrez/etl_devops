@@ -1,3 +1,4 @@
+''' REFRACTORED INTO STRUCTURED /etl_pipeline PROJECT
 import pandas as pd
 import requests
 from datetime import datetime
@@ -112,3 +113,4 @@ api_records = get_api_data(api_url)
 df = get_transformed_data(api_records)
 load_into_database(df)
 
+'''
