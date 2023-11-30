@@ -13,9 +13,18 @@ def index():
 def correlation():
     query = 'SELECT * FROM Station'
     df = pd.read_sql(query, engine)
-    numerical_columns = ['capacity', 'numdocksavailable', 'numbikesavailable', 'mechanical', 'ebike']
+    numerical_columns = ['capacité', 'nombre_docks_disponibles', 'nombre_vélos_disponibles', 'mécanique', 'vélo_électrique']
+    df.rename(columns={
+    'capacity': 'capacité',
+    'numdocksavailable': 'nombre_docks_disponibles',
+    'numbikesavailable': 'nombre_vélos_disponibles',
+    'mechanical': 'mécanique',
+    'ebike': 'vélo_électrique'
+    }, inplace=True)
     correlation_matrix = df[numerical_columns].corr()
-    fig = px.imshow(correlation_matrix)
+    
+    fig = px.imshow(correlation_matrix, labels=dict(color="Correlation"))
+
     return render_template('plot.html', plot=fig.to_html())
 
 

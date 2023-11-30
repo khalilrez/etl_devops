@@ -26,11 +26,7 @@ def get_transformed_data(api_records):
 
         df = apply_transform(df)
 
-        numerical_columns = ['capacity', 'numdocksavailable', 'numbikesavailable', 'mechanical', 'ebike']
-        correlation_matrix = df[numerical_columns].corr()
-
         print(df)
-        print(correlation_matrix)
         today_date = datetime.today().strftime('%Y-%m-%d')
 
         df.to_csv(f'data_{today_date}.csv', index=False)

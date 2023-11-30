@@ -15,4 +15,6 @@ station_table = Table(
     Column('is_renting', Boolean),
     Column('is_returning', Boolean),
     Column('nom_arrondissement_communes', String(255)),
+    Column('longitude', String(255)),
+    Column('latitude', String(255)),
 )
