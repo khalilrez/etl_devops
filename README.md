@@ -50,7 +50,7 @@ DataViz Dashboard : localhost:8001
 Monitoring Processes:
 - cAdvisor : localhost:8080
 - Prometheus: localhost:9090
-- Grafana: localhost:3000
+- Grafana: localhost:3000 ### Search for dashboard in Servics folder ###
 
 ~~~
 grafana credentials:
