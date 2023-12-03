@@ -64,6 +64,7 @@ echo "************* Image Building Phase Started *************"
 echo "********************************************************"
 build_etl_script_image
 build_dashboard_image
+cd ${CURRENT_DIR}
 echo "********************************************************"
 echo "************* Image Building Phase Ended *************"
 echo "********************************************************"
