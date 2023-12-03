@@ -27,6 +27,24 @@ def correlation():
 
     return render_template('plot.html', plot=fig.to_html())
 
+@app.route('/x-y-analysis', methods=['GET', 'POST'])
+def correlation_analysis():
+    if request.method == 'POST':
+        xAxis = request.form.get('xAxis')
+        yAxis = request.form.get('yAxis')
+        order_by = request.form.get('order_by')
+        query = f'SELECT {xAxis}, {yAxis} FROM Station '
+        if(order_by):
+            query += f'ORDER BY {xAxis}, {yAxis} {order_by}'
+        df = pd.read_sql(query,engine)
+    else:
+        xAxis = "capacity"
+        yAxis = "mechanical"
+        query = f'SELECT {xAxis}, {yAxis} FROM Station'
+        df = pd.read_sql(query,engine)
+    fig = px.scatter(df, x=xAxis, y=yAxis, trendline="ols", trendline_scope="overall")
+    numerical_columns = ['capacity', 'numdocksavailable', 'numbikesavailable', 'mechanical', 'ebike']
+    return render_template('plot.html',plot=fig.to_html(),xAxis=xAxis,yAxis=yAxis,options_dict=numerical_columns)
 
 
 @app.route('/capacity', methods=['GET', 'POST'])

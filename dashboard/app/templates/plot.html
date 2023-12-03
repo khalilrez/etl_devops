@@ -23,6 +23,48 @@
             <button class="btn btn-primary" type="submit">Submit / Reset Filter</button>
         </form>
         </div>
-        {% endif %}
         
+        {% elif 'correlation' in request.path %}
+            <div></div>
+
+        {% else %}
+        <div class="container mt-4">
+            <h4>Analysis Controls</h4>
+            <div class="alert alert-danger" role="alert" id="error" style="display:none">Les valeurs X et Y sont identiques</div>
+        <form method="post" action="#" name="xy" onsubmit="return validateForm()">
+            <select name="xAxis" id="xAxis">
+                <option value="none">Value for X Axis</option>
+                {% for option in options_dict  %}
+                <option value="{{option}}">{{ option }}</option>
+                {% endfor %}
+            </select>
+            <select name="yAxis" id="yAxis">
+                <option value="none">Value for Y Axis</option>
+                {% for option in options_dict  %}
+                <option value="{{option}}">{{ option }}</option>
+                {% endfor %}
+            </select>
+            <label for="order_by">Order By:</label>
+            <select name="order_by" id="order_by">
+                <option value="ASC">Ascending</option>
+                <option value="DESC">Descending</option>
+            </select>
+                
+            <button class="btn btn-primary" type="submit">Submit / Reset Filter</button>
+        </form>
+        </div>
+        {% endif %}
+
+
+        <script>
+            function validateForm(){
+                let xInput = document.forms["xy"]["xAxis"]
+                let yInput = document.forms["xy"]["yAxis"]
+                if (xInput.value == yInput.value) {
+                    document.getElementById("error").style.display = "block"
+                    return false
+                }
+                return true
+            }
+        </script>
     {% endblock content %}
