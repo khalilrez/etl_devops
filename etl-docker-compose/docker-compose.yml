@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mysql-db:
+    image: mysql:latest
+    container_name: quantify-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: quantify
+      MYSQL_DATABASE: quantify
+    ports:
+      - "3306:3306"
+
+  etl-script:
+    image: khalilrez/etl-script:1.0.0
+    depends_on:
+      - mysql-db
+    restart: on-failure
+
+  dashboard-etl:
+    image: khalilrez/gunicorn-etl-dashboard:1.0.0
+    depends_on:
+      - mysql-db
+    restart: on-failure
+    ports:
+      - "8001:8001"
