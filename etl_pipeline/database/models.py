@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Boolean,Table
-from database.connection import metadata
+from database.connection import metadata, engine
 
 station_table = Table(
     'Station',
@@ -18,3 +18,5 @@ station_table = Table(
     Column('longitude', String(255)),
     Column('latitude', String(255)),
 )
+
+metadata.create_all(engine)

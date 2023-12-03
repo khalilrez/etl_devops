@@ -1,0 +1,51 @@
+2023-12-03 16:47:28 - ERROR: Fail to build ETL script image.
+2023-12-03 16:47:28 - ERROR: Fail to build dashboard image.
+2023-12-03 16:47:30 - ERROR: Attempt 1 failed.
+2023-12-03 16:47:40 - ERROR: Attempt 2 failed.
+2023-12-03 16:49:45 - ERROR: Fail to build ETL script image.
+2023-12-03 16:49:45 - ERROR: Fail to build dashboard image.
+2023-12-03 16:49:45 - ERROR: Attempt 1 failed.
+2023-12-03 16:49:55 - ERROR: Attempt 2 failed.
+2023-12-03 16:50:02 - ERROR: Fail to build ETL script image.
+2023-12-03 16:50:03 - ERROR: Fail to build dashboard image.
+2023-12-03 16:50:18 - ERROR: Fail to build ETL script image.
+2023-12-03 16:50:19 - ERROR: Fail to build dashboard image.
+2023-12-03 16:50:19 - ERROR: Attempt 1 failed.
+2023-12-03 16:50:29 - ERROR: Attempt 2 failed.
+2023-12-03 16:51:54 - ERROR: Fail to build ETL script image.
+2023-12-03 16:51:54 - ERROR: Fail to build dashboard image.
+2023-12-03 16:51:55 - ERROR: Attempt 1 failed.
+2023-12-03 16:52:05 - ERROR: Attempt 2 failed.
+2023-12-03 16:52:22 - ERROR: Fail to build ETL script image.
+2023-12-03 16:52:23 - ERROR: Fail to build dashboard image.
+2023-12-03 16:52:23 - ERROR: Attempt 1 failed.
+2023-12-03 16:52:33 - ERROR: Attempt 2 failed.
+2023-12-03 16:52:47 - ERROR: Fail to build ETL script image.
+2023-12-03 16:52:47 - ERROR: Fail to build dashboard image.
+2023-12-03 16:52:47 - ERROR: Attempt 1 failed.
+2023-12-03 16:52:57 - ERROR: Attempt 2 failed.
+2023-12-03 16:54:42 - ERROR: Fail to build ETL script image.
+2023-12-03 16:54:42 - ERROR: Fail to build dashboard image.
+2023-12-03 16:54:42 - ERROR: Attempt 1 failed.
+2023-12-03 16:54:52 - ERROR: Attempt 2 failed.
+2023-12-03 16:54:56 - ERROR: Fail to build ETL script image.
+2023-12-03 16:54:57 - ERROR: Fail to build dashboard image.
+2023-12-03 16:54:57 - ERROR: Attempt 1 failed.
+2023-12-03 16:55:07 - ERROR: Attempt 2 failed.
+2023-12-03 16:55:17 - ERROR: Attempt 3 failed.
+2023-12-03 16:56:34 - ERROR: Fail to build ETL script image.
+2023-12-03 16:56:34 - ERROR: Fail to build dashboard image.
+2023-12-03 16:56:35 - ERROR: Attempt 1 failed.
+2023-12-03 16:56:45 - ERROR: Attempt 2 failed.
+2023-12-03 16:56:55 - ERROR: Attempt 3 failed.
+2023-12-03 16:57:05 - ERROR: Attempt 4 failed.
+2023-12-03 16:57:15 - ERROR: Attempt 5 failed.
+2023-12-03 16:57:25 - ERROR: Attempt 6 failed.
+2023-12-03 16:57:38 - ERROR: Fail to build ETL script image.
+2023-12-03 16:57:39 - ERROR: Fail to build dashboard image.
+2023-12-03 16:57:39 - ERROR: Attempt 1 failed.
+2023-12-03 16:57:49 - ERROR: Attempt 2 failed.
+2023-12-03 16:57:59 - ERROR: Attempt 3 failed.
+2023-12-03 16:58:10 - ERROR: Attempt 4 failed.
+2023-12-03 16:58:20 - ERROR: Attempt 5 failed.
+2023-12-03 16:58:30 - ERROR: Attempt 6 failed.
