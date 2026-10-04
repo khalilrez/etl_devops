@@ -52,12 +52,7 @@ Monitoring Processes:
 - Prometheus: localhost:9090
 - Grafana: localhost:3000 ### Search for dashboard in Servics folder ###
 
-~~~
-grafana credentials:
-admin@admin
-mysql credentials:
-root@quantify
-~~~  
+Default credentials for the demo stack are set in the compose files. Change them before exposing anything beyond localhost.
 
 ## Features that could be added
 - Testing For ETL script
